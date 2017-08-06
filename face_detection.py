@@ -1,17 +1,12 @@
 import face_recognition
 import cv2
 
-
-
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-adesh_image = face_recognition.load_image_file("adesh.jpg")
+adesh_image = face_recognition.load_image_file("jon.jpg")
 adesh_face_encoding = face_recognition.face_encodings(adesh_image)[0]
-
-
-
 
 
 # Initialize some variables
@@ -40,7 +35,9 @@ while True:
             name = "Unknown"
 
             if match[0]:
-                name = "Adesh"
+                name = "The King " \
+                       "In the " \
+                       "North"
 
 
             face_names.append(name)
